@@ -1,6 +1,6 @@
 FROM alpine:3.11
 
-ARG KUBE_VERSION="v1.13.12"
+ARG KUBE_VERSION="v1.13.4"
 
 RUN apk add --update ca-certificates \
  && apk add --update -t deps curl \
@@ -15,5 +15,5 @@ COPY ./mulan-kube /usr/local/bin/mulan-kube
 
 RUN chmod +x /usr/local/bin/mulan-kube
 
-ENTRYPOINT ["/usr/bin/mulan-kube"]
+ENTRYPOINT ["/usr/local/bin/mulan-kube"]
 CMD ["--help"]
