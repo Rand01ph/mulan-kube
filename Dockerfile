@@ -15,5 +15,5 @@ COPY ./mulan-kube /usr/local/bin/mulan-kube
 
 RUN chmod +x /usr/local/bin/mulan-kube
 
-ENTRYPOINT ["/usr/local/bin/mulan-kube"]
+ENTRYPOINT ["mulan-kube"]
 CMD ["--help"]
